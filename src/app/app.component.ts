@@ -4,6 +4,7 @@ import { DistanciaComponent } from "./formularios/distancia/distancia.component"
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, DistanciaComponent],
   templateUrl: './app.component.html',
 

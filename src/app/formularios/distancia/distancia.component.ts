@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControlState, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Distancia } from './distanciaCal';
 
 @Component({
   selector: 'app-distancia',
@@ -10,24 +11,11 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrl: './distancia.component.css'
 })
 export class DistanciaComponent {
-  formulario!:FormGroup;
-  resultado!:number;
-  constructor(){}
-  ngOnInit():void{
-    this.formulario=new FormGroup({
-      x1:new FormControl(''),
-      y1:new FormControl(''),
-      x2:new FormControl(''),
-      y2:new FormControl(''),
+  distancia = new Distancia();
 
-    });
-  }
-  multNumeros():void{
-    const x1=this.formulario.get('x1')?.value;
-    const y1=this.formulario.get('y1')?.value;
-    const x2=this.formulario.get('x2')?.value;
-    const y2=this.formulario.get('y2')?.value;
-    this.resultado=Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  calcularDistancia( ): void {
+    this.distancia.multNumeros();
+    console.log(this.distancia.resultado);
   }
 
 }
