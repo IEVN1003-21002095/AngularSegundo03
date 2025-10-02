@@ -19,6 +19,7 @@ export class DistanciaComponent {
       y1:new FormControl(''),
       x2:new FormControl(''),
       y2:new FormControl(''),
+
     });
   }
   multNumeros():void{
