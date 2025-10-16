@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body bg-light p-5">
+      <h2 class="text-center text-primary fw-bold mb-4">
+        🧮 A por B, chaval
+      </h2>
+      <form [formGroup]="formulario" (ngSubmit)="calcularMultiplicacion()">
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <label for="a" class="form-label">🔢 Valor de A</label>
+            <input id="a" formControlName="a" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa A">
+          </div>
+          <div class="col-md-6">
+            <label for="b" class="form-label">🔢 Valor de B</label>
+            <input id="b" formControlName="b" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa B">
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-outline-primary btn-lg rounded-pill px-5 shadow-sm">
+            <i class="bi bi-calculator-fill me-2"></i>Calcular
+          </button>
+        </div>
+        <div class="text-center mt-5">
+          <h4 class="text-success fw-semibold">
+            ✨ Resultado: <span class="fw-bold">{{ resultado }}</span>
+          </h4>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
