@@ -7,21 +7,25 @@
       <form [formGroup]="formulario" (ngSubmit)="calcularDistancia()">
         <div class="row g-3 mb-4">
           <div class="col-md-6">
-            <label for="x1" class="form-label">🅧 Coordenada X1</label>
+            <label for="x1" class="form-label">Coordenada X1</label>
+            <br>
             <input id="x1" formControlName="x1" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa X1" />
           </div>
           <div class="col-md-6">
-            <label for="y1" class="form-label">🅨 Coordenada Y1</label>
+            <label for="y1" class="form-label">Coordenada Y1</label>
+            <br>
             <input id="y1" formControlName="y1" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa Y1" />
           </div>
         </div>
         <div class="row g-3 mb-4">
           <div class="col-md-6">
-            <label for="x2" class="form-label">🅧 Coordenada X2</label>
+            <label for="x2" class="form-label">Coordenada X2</label>
+            <br>
             <input id="x2" formControlName="x2" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa X2" />
           </div>
           <div class="col-md-6">
-            <label for="y2" class="form-label">🅨 Coordenada Y2</label>
+            <label for="y2" class="form-label">Coordenada Y2</label>
+            <br>
             <input id="y2" formControlName="y2" type="number" class="form-control rounded-pill shadow-sm" placeholder="Ingresa Y2" />
           </div>
         </div>
@@ -32,7 +36,7 @@
         </div>
         <div class="text-center mt-5">
           <h4 class="text-success fw-semibold">
-            📏 Resultado: <span class="fw-bold">{{ resultado }}</span>
+           Resultado: <span class="fw-bold">{{ resultado }}</span>
           </h4>
         </div>
       </form>
